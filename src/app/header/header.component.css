@@ -1,0 +1,148 @@
+/* src/app/header/header.component.css */
+
+/* Basic Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    background-color: #11013a;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Navigation */
+  nav {
+    flex: 1;
+    margin-left: 40px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  nav ul li {
+    margin-right: 25px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active-link {
+    color: #005ff7;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    border: 2px solid #005ff7;
+    color: #005ff7;
+    margin-right: 10px;
+  }
+  
+  .login-btn:hover {
+    background-color: #005ff7;
+    color: #fff;
+  }
+  
+  .signup-btn {
+    background-color: #005ff7;
+    border: 2px solid #005ff7;
+    color: #fff;
+  }
+  
+  .signup-btn:hover {
+    background-color: transparent;
+    color: #005ff7;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .nav-links {
+      display: none;
+    }
+  
+    nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #11013a;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+  
+    nav.active {
+      max-height: 300px; /* Adjust as needed */
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+  
+    nav ul li {
+      margin: 15px 0;
+      text-align: center;
+    }
+  
+    .action-buttons {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  

@@ -1,0 +1,34 @@
+
+
+  <header class="header">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a routerLink="/">
+          <!-- Replace with your actual logo image or text -->
+          <img src="blob:https://web.whatsapp.com/817055bc-18d6-4c67-bd63-37ab24e34a2c" alt="Logo" />
+        </a>
+      </div>
+  
+      <!-- Navigation Links -->
+      <nav [ngClass]="{'active': isMobileMenuOpen}">
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active-link" (click)="toggleMobileMenu()">Home</a></li>
+          <li><a routerLink="/about" routerLinkActive="active-link" (click)="toggleMobileMenu()">About</a></li>
+          <li><a routerLink="/services" routerLinkActive="active-link" (click)="toggleMobileMenu()">Services</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active-link" (click)="toggleMobileMenu()">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <a routerLink="/login" class="btn login-btn">Login</a>
+        <a routerLink="/signup" class="btn signup-btn">Sign Up</a>
+      </div>
+  
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger" (click)="toggleMobileMenu()">
+        <i class="fas" [ngClass]="{'fa-times': isMobileMenuOpen, 'fa-bars': !isMobileMenuOpen}"></i>
+      </div>
+    </div>
+  </header>
